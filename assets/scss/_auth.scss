@@ -1,0 +1,51 @@
+
+.auth {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+
+    &__photo {
+        width: 824px;
+        flex-shrink: 0;
+
+        img {
+            display: flex;
+            width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-wrapper {
+            width: 100%;
+            max-width: 472px;
+        }
+    }
+
+    &__bottom {
+        margin-top: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+
+        a {
+            color: #2A8E9E;
+            font-size: 16px;
+            letter-spacing: 0.15px;
+
+            &:not(:first-child) {
+                padding-left: 16px;
+                border-left: 1px solid #C4C4C4;
+            }
+
+        }
+    }
+}
+

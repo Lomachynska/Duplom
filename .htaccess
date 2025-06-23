@@ -1,0 +1,12 @@
+# Зазначення файлу за замовчуванням
+DirectoryIndex index.php
+
+# Увімкнення режиму перепису URL
+RewriteEngine On
+
+# Виключення обробки існуючих файлів і директорій
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Перенаправлення всіх запитів до index.php з параметром url
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]

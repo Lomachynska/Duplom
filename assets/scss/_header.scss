@@ -1,0 +1,108 @@
+.header {
+    position: sticky;
+    top: 0;
+    padding: 20px 0;
+    background-color: #fff;
+    z-index: 9;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__main {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &-text {
+            font-weight: 700;
+            color: #2A8E9E;
+            font-size: 20px;
+        }
+    }
+
+    &__nav {
+        ul {
+            display: flex;
+            gap: 32px;
+
+            li {
+                list-style: none;
+
+                a {
+                    font-size: 16px;
+                    color: #062131;
+                }
+            }
+        }
+    }
+
+    &__auth {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__panel {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            p {
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                color: #FF5154;
+
+                span {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        &-icon {
+            width: 42px;
+            height: 42px;
+
+            img {
+                border-radius: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: flex;
+            }
+        }
+    }
+}
+
+.link-item {
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #2A8E9E;
+        transition: width .3s;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
